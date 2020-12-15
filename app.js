@@ -111,9 +111,9 @@ class DrumKit {
   changeTempo(e) {
     const tempoText = document.querySelector(".tempo-nr");
     tempoText.innerText = this.bpm;
+    this.bpm = e.target.value;
   }
   updateTempo() {
-    this.bpm = e.target.value;
     clearInterval(this.isPlaying);
     this.isPlaying = null;
     const playBtn = document.querySelector(".play");
